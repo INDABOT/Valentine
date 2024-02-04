@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+  <title>Valentine's Question</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1> Hey Ututu m 🥰  will you be my val?</h1>
+    <button id="noButton" onclick="handleNoClick()">NO</button>
+    <button id="yesButton" onclick="handleYesClick()">YES</button>
+  </div>
+
+  <div id="loveMessage">
+    <img src="https://gifdb.com/images/thumbnail/cat-kiss-dip-peach-goma-1jfhz0dnkysf9wur.webp" alt="Kissing Couple">
+    <p><strong>I LOVE YOU</strong></p>
+  </div>
+
+
+
+
+  <script>
+    let greenScaleMultiplier = 1;
+
+function handleNoClick() {
+  // Increase the size of the green button by 1.5X
+  greenScaleMultiplier += 0.5;
+  document.getElementById("yesButton").style.transform = `scale(${greenScaleMultiplier})`;
+
+  // Change the caption in the noButton to one of the alternatives
+  const alternatives = ["Change of heart?", "I love you", "You're the best", "Mistake?"];
+  const randomAlternative = alternatives[Math.floor(Math.random() * alternatives.length)];
+  document.getElementById("noButton").innerHTML = randomAlternative;
+
+  // Show the love message
+  // document.getElementById("loveMessage").style.display = "block";
+}
+
+function handleYesClick() {
+  // Display the kissing animation and "I LOVE YOU" message
+  document.getElementById("loveMessage").style.display = "block";
+
+  // Disable the buttons after 'YES' is clicked
+  document.getElementById("yesButton").disabled = true;
+  document.getElementById("noButton").disabled = true;
+}
+
+  </script>
+</body>
+</html>
