@@ -22,3 +22,4 @@ function handleYesClick() {
   document.getElementById("yesButton").disabled = true;
   document.getElementById("noButton").disabled = true;
 }
+uoyuogpktguggg9g9ft8ft8yu
